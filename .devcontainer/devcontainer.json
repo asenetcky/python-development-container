@@ -1,14 +1,10 @@
 {
   "name": "Python Development",
   "image": "mcr.microsoft.com/devcontainers/python:3",
-  "features": {
-     "ghcr.io/devcontainers/features/neovim:1": {}
-  },
   "customizations": {
     "vscode": {
       "extentions": [
-        "ms-python.python",
-        "vscode-neovim.neovim"
+        "ms-python.python"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python",
