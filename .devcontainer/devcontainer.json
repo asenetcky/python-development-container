@@ -1,6 +1,9 @@
 {
   "name": "Python Development",
   "image": "mcr.microsoft.com/devcontainers/python:3",
+      "features": {
+        "ghcr.io/va-h/devcontainers-features/uv:1": {}
+    },
   "customizations": {
     "vscode": {
       "extentions": [
@@ -14,6 +17,6 @@
       }
     }
   },
-  "postCreateCommand": "pip install uv && uv init && uv add ruff",
+  "postCreateCommand": "uv init && uv add ruff",
   "remoteUser": "vscode"
 }
