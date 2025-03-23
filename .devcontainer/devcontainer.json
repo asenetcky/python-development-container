@@ -1,6 +1,6 @@
 {
   "name": "Python Development",
   "image": "mcr.microsoft.com/devcontainers/python:3",
-  "postCreateCommand": "pip install uv && uv add  --dev ruff",
+  "postCreateCommand": "pip install uv && uv init && uv add ruff",
   "remoteUser": "vscode"
 }
