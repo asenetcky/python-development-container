@@ -1,0 +1,34 @@
+{
+  "name": "Python & Rust Development",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "installUv": true,
+      "installRuff": true,
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/rust:1": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "ms-python.vscode-pylance",
+        "rust-lang.rust-analyzer" // Rust analyzer for vscode
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.formatting.provider": "ruff",
+        "python.linting.ruffEnabled": true,
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": false,
+        "python.testing.pytestEnabled": true
+      }
+    }
+  },
+  "postCreateCommand": "uv venv && source .venv/bin/activate && uv pip install -r requirements.txt",
+  "remoteUser": "vscode"
+}
