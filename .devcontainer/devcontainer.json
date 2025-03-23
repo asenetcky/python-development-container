@@ -1,0 +1,11 @@
+{
+  "name": "Python & Rust Development",
+  "image": "mcr.microsoft.com/devcontainers/python:3",
+  "features": {
+    "ghcr.io/devcontainers/features/rust:1": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "pip install uv && uv add  --dev ruff",
+  "remoteUser": "vscode"
+}
