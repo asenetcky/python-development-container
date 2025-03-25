@@ -1,5 +1,5 @@
 {
-  "name": "Python and Neovim Development",
+  "name": "Python Development",
   "image": "mcr.microsoft.com/devcontainers/python:3",
   "features": {
     "ghcr.io/devcontainers/features/python:1": {
@@ -7,7 +7,6 @@
       "installRuff": true,
       "version": "latest"
     },
-    "ghcr.io/devcontainers/features/neovim:1": {},
     "ghcr.io/itsmechlark/features/1password:1": {}
   },
   "customizations": {
@@ -15,7 +14,7 @@
       "extensions": [
         "ms-python.python",
         "charliermarsh.ruff",
-        "asvetliakov.vscode-neovim"
+        "vscodevim.vim"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python",
