@@ -1,22 +1,30 @@
 {
-  "name": "Python Development",
+  "name": "Python and Neovim Development",
   "image": "mcr.microsoft.com/devcontainers/python:3",
-      "features": {
-        "ghcr.io/va-h/devcontainers-features/uv:1": {}
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "installUv": true,
+      "installRuff": true,
+      "version": "latest"
     },
+    "ghcr.io/devcontainers/features/neovim:1": {}
+  },
   "customizations": {
     "vscode": {
-      "extentions": [
-        "ms-python.python"
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "asvetliakov.vscode-neovim"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python",
         "python.formatting.provider": "ruff",
         "python.linting.ruffEnabled": true,
-        "python.linting.enabled": true
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": false,
+        "python.testing.pytestEnabled": true
       }
     }
   },
-  "postCreateCommand": "uv init && uv add ruff",
   "remoteUser": "vscode"
 }
