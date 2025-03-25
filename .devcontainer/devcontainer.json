@@ -2,12 +2,9 @@
   "name": "Python Development",
   "image": "mcr.microsoft.com/devcontainers/python:3",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "installUv": true,
-      "installRuff": true,
-      "version": "latest"
-    },
-    "ghcr.io/itsmechlark/features/1password:1": {}
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {},
+    "ghcr.io/jsburckhardt/devcontainer-features/ruff:1": {}
   },
   "customizations": {
     "vscode": {
