@@ -23,5 +23,6 @@
       }
     }
   },
+  "postCreateCommand": "uv init",
   "remoteUser": "vscode"
 }
