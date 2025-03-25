@@ -1,2 +1,1 @@
-# legendary-fortnight
-testing dev containers
+# Python Development Project
