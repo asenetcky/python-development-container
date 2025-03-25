@@ -2,22 +2,27 @@
   "name": "Python Development",
   "image": "mcr.microsoft.com/devcontainers/python:3",
   "features": {
-     "ghcr.io/devcontainers/features/neovim:1": {}
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {},
+    "ghcr.io/jsburckhardt/devcontainer-features/ruff:1": {}
   },
   "customizations": {
     "vscode": {
-      "extentions": [
+      "extensions": [
         "ms-python.python",
-        "vscode-neovim.neovim"
+        "charliermarsh.ruff"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python",
         "python.formatting.provider": "ruff",
         "python.linting.ruffEnabled": true,
-        "python.linting.enabled": true
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": false,
+        "python.testing.pytestEnabled": true,
+        "editor.lineNumbers": "relative"
       }
     }
   },
-  "postCreateCommand": "pip install uv && uv init && uv add ruff",
+  "postCreateCommand": "uv init",
   "remoteUser": "vscode"
 }
