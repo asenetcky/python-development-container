@@ -7,7 +7,8 @@
       "installRuff": true,
       "version": "latest"
     },
-    "ghcr.io/devcontainers/features/neovim:1": {}
+    "ghcr.io/devcontainers/features/neovim:1": {},
+    "ghcr.io/itsmechlark/features/1password:1": {}
   },
   "customizations": {
     "vscode": {
