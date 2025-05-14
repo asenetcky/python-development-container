@@ -11,8 +11,7 @@
       "extensions": [
         "ms-python.python",
         "charliermarsh.ruff",
-        "ms-toolsai.jupyter",
-        "vscodevim.vim"
+        "ms-toolsai.jupyter"
       ],
       "settings": {
         "python": {
