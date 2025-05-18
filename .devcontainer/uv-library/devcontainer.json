@@ -1,5 +1,5 @@
 {
-  "name": "Python Development",
+  "name": "Library",
   "image": "mcr.microsoft.com/devcontainers/python:3",
   "features": {
     "ghcr.io/devcontainers/features/python:1": {},
@@ -29,7 +29,7 @@
       }
     }
   },
-  "postCreateCommand": "uv init",
+  "postCreateCommand": "uv init --lib",
   "postStartCommand": "uv sync",
   "remoteUser": "vscode"
 }
