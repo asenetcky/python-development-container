@@ -16,30 +16,23 @@
       ],
       "settings": {
         "python": {
-          "defaultInterpreterPath": "/usr/local/bin/python",
           "editor.formatOnSave": true,
-          "editor.defaultFormatter": "charliermarsh.ruff",
-          "formatting.provider": "ruff",
-          "linting.ruffEnabled": true,
-          "linting.enabled": true,
-          "linting.flake8Enabled": false,
-          "testing.pytestEnabled": true
+          "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+            },
+          "editor.defaultFormatter": "charliermarsh.ruff"
+        },
+        "notebook.formatOnSave.enabled": true,
+        "notebook.codeActionsOnSave": {
+          "notebook.source.fixAll": "explicit",
+          "notebook.source.organizeImports": "explicit"
         },
         "editor.lineNumbers": "relative"
       }
     }
   },
-  "postCreateCommand": [
-    "uv init",
-    "&& uv add --dev pre-commit",
-    "&& uv tool run pre-commit install"
-  ],
-  // "postCreateCommand": {
-  //   "uv-init": ["uv", "init", "--quiet"],
-  //   "install-dev-tools": ["uv", "pip", "install", "--system", "pre-commit"],
-  //   "pre-commit-install": ["pre-commit", "install"]
-  // },
-  //"postCreateCommand": "uv init && uv add --dev pre-commit",
+  "postCreateCommand": "uv init && uv add --dev pre-commit && uv tool run pre-commit install",
   "postStartCommand": "uv sync",
   "remoteUser": "vscode"
 }
