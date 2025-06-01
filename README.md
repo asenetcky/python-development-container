@@ -10,3 +10,27 @@ creation and will sync with every start.
 
 A python-focused `.gitignore` is provided and everything is licensed 
 under the MIT License.
+
+## Github Actions
+
+`Ruff` is used to check the project on a push or pull request.
+
+
+## Pre-Commit
+
+[pre-commit](https://pre-commit.com/) is used and configured to have `Ruff`
+fix and format code in a commit.
+
+You can install pre-commit doing the following:
+
+`$ uv add --dev pre-commit`
+
+and then install inside the activated virtual environment:
+
+`$ pre-commit install`
+
+This will run the pre-commit hook when commiting.
+
+You can run hooks at anytime with:
+
+`$ pre-commit run --all-files`
