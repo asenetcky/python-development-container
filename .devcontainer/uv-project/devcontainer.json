@@ -29,7 +29,7 @@
       }
     }
   },
-  "postCreateCommand": "uv init",
+  "postCreateCommand": "uv init && uv add --dev pre-commit",
   "postStartCommand": "uv sync",
   "remoteUser": "vscode"
 }
