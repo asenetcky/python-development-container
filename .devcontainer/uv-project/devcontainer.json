@@ -29,7 +29,12 @@
       }
     }
   },
-  "postCreateCommand": "uv init && uv add --dev pre-commit",
+  "postCreateCommand": {
+    "uv-init": ["uv", "init", "--quiet"],
+    "install-dev-tools": ["uv", "pip", "install", "--system", "pre-commit"],
+    "pre-commit-install": ["pre-commit", "install"]
+  },
+  //"postCreateCommand": "uv init && uv add --dev pre-commit",
   "postStartCommand": "uv sync",
   "remoteUser": "vscode"
 }
