@@ -15,7 +15,7 @@
         "ms-toolsai.jupyter"
       ],
       "settings": {
-        "python": {
+        "[python]": {
           "editor.formatOnSave": true,
           "editor.codeActionsOnSave": {
             "source.fixAll": "explicit",
