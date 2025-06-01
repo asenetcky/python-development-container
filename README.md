@@ -20,17 +20,3 @@ under the MIT License.
 
 [pre-commit](https://pre-commit.com/) is used and configured to have `Ruff`
 fix and format code in a commit.
-
-You can install pre-commit doing the following:
-
-`$ uv add --dev pre-commit`
-
-and then install inside the activated virtual environment:
-
-`$ pre-commit install`
-
-This will run the pre-commit hook when commiting.
-
-You can run hooks at anytime with:
-
-`$ pre-commit run --all-files`
